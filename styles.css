@@ -9,6 +9,7 @@
 
 .sidebar h2 {
     margin-bottom: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .sidebar ul {
@@ -23,6 +24,7 @@
 .sidebar ul li a {
     text-decoration: none;
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 .sidebar ul li a:hover {
@@ -31,37 +33,41 @@
 
 /* Estilo del contenido principal */
 .main-content {
-    margin-left: 220px;
+    margin-left: 220px; /* Mueve el contenido hacia la derecha para dejar espacio al sidebar */
     padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    align-items: center;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 input, select {
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
+/* Ajuste de las checkbox de entrada/salida */
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+/* Estilo para el botón */
 button {
     grid-column: span 2;
     padding: 10px;
+    width: 150px; /* Ajusta el ancho */
     background-color: #007BFF;
     color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
