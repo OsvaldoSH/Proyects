@@ -1,0 +1,67 @@
+/* Estilo del menú lateral */
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    position: fixed;
+    height: 100%;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    color: #007BFF;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    grid-column: span 2;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
