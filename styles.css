@@ -5,6 +5,7 @@
     position: fixed;
     height: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .sidebar h2 {
@@ -36,20 +37,22 @@
     margin-left: 220px; /* Mueve el contenido hacia la derecha para dejar espacio al sidebar */
     padding: 20px;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
+/* Estilo del formulario para alinear etiquetas y campos */
 form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 150px 1fr; /* Etiquetas en una columna, campos en otra */
+    gap: 15px 10px; /* Espaciado entre filas y columnas */
     align-items: center;
+    max-width: 600px; /* Ancho máximo del formulario */
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
     font-size: 14px;
+    text-align: right; /* Alinea las etiquetas a la derecha */
 }
 
 input, select {
@@ -59,15 +62,46 @@ input, select {
     font-size: 14px;
 }
 
-/* Ajuste de las checkbox de entrada/salida */
+/* Ajuste de los checkbox de entrada/salida */
 input[type="checkbox"] {
     margin-left: 10px;
+    transform: scale(1.2); /* Agranda los checkboxes */
 }
 
-/* Estilo para el botón */
+/* Ajuste para el botón */
 button {
     grid-column: span 2;
     padding: 10px;
-    width: 150px; /* Ajusta el ancho */
+    width: 150px;
     background-color: #007BFF;
     color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto; /* Centra el botón */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de los campos de cantidad, fecha y volumen */
+input[type="number"],
+input[type="date"],
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:disabled {
+    background-color: #f0f0f0;
+}
+
+/* Mejora en la presentación general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
