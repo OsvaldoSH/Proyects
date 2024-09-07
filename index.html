@@ -3,55 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Inventario</title>
+    <title>Gestión de Mayoristas</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilo para ocultar campos */
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <h1>Gestión de Clientes Mayoristas</h1>
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <h2>Mayoristas</h2>
+        <ul>
+            <li><a href="#">Opción 1</a></li>
+            <li><a href="#">Opción 2</a></li>
+        </ul>
+    </div>
 
-    <form id="salesForm">
-        <!-- Seleccionar Cliente -->
-        <label for="client">Cliente:</label>
-        <select id="client" required>
-            <option value="">Seleccionar Cliente</option>
-            <option value="Cliente 1">Cliente 1</option>
-            <option value="Cliente 2">Cliente 2</option>
-            <!-- Añade más clientes -->
-        </select>
+    <!-- Formulario principal -->
+    <div class="main-content">
+        <form id="salesForm">
+            <!-- Selección de Cliente -->
+            <label for="client">Cliente:</label>
+            <select id="client" required>
+                <option value="">Seleccionar Cliente</option>
+                <option value="Cliente 1">Cliente 1</option>
+                <option value="Cliente 2">Cliente 2</option>
+            </select>
 
-        <!-- Entrada o Salida -->
-        <p>Tipo de Operación:</p>
-        <label>
-            <input type="radio" name="operation" value="entrada" required> Entrada
-        </label>
-        <label>
-            <input type="radio" name="operation" value="salida" required> Salida
-        </label>
+            <!-- Selección de Producto -->
+            <label for="product">Producto:</label>
+            <select id="product" required>
+                <option value="">Seleccionar Producto</option>
+                <option value="Producto 1">Producto 1</option>
+                <option value="Producto 2">Producto 2</option>
+            </select>
 
-        <!-- Selección de Producto -->
-        <label for="product">Producto:</label>
-        <input type="text" id="product" required>
+            <!-- Entrada o Salida -->
+            <label for="operation">Tipo de operación:</label>
+            <label>
+                <input type="checkbox" name="operation" value="entrada"> Entrada
+            </label>
+            <label>
+                <input type="checkbox" name="operation" value="salida"> Salida
+            </label>
 
-        <!-- Cantidad Total (sólo visible en entradas) -->
-        <div id="totalQtyField">
-            <label for="totalQty">Cantidad Total:</label>
-            <input type="number" id="totalQty">
-        </div>
+            <!-- Cantidad -->
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" required>
 
-        <!-- Cantidad Reportada (sólo visible en salidas) -->
-        <div id="reportedQtyField" class="hidden">
-            <label for="reportedQty">Cantidad Reportada:</label>
-            <input type="number" id="reportedQty">
-        </div>
+            <!-- Fecha -->
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" required>
 
-        <button type="submit">Registrar Operación</button>
-    </form>
+            <!-- Volumen Actual -->
+            <label for="volume">Volumen Actual:</label>
+            <input type="text" id="volume" disabled>
+
+            <!-- Botón para enviar -->
+            <button type="submit">Registrar Operación</button>
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
