@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Inventario</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Aquí enlazarás el archivo CSS más adelante -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Gestión de Clientes Mayoristas</h1>
 
     <!-- Formulario para registrar ventas -->
     <form id="salesForm">
+        <!-- Seleccionar Cliente -->
+        <label for="client">Cliente:</label>
+        <select id="client" required>
+            <option value="">Seleccionar Cliente</option>
+            <option value="Cliente 1">Cliente 1</option>
+            <option value="Cliente 2">Cliente 2</option>
+            <!-- Añade más clientes según sea necesario -->
+        </select>
+
+        <!-- Entrada o Salida -->
+        <p>Tipo de Operación:</p>
+        <label>
+            <input type="radio" name="operation" value="entrada" required>
+            Entrada
+        </label>
+        <label>
+            <input type="radio" name="operation" value="salida" required>
+            Salida
+        </label>
+
+        <!-- Selección de Producto -->
         <label for="product">Producto:</label>
         <input type="text" id="product" required>
-        
+
+        <!-- Cantidad Total -->
         <label for="totalQty">Cantidad Total:</label>
         <input type="number" id="totalQty" required>
-        
+
+        <!-- Cantidad Reportada -->
         <label for="reportedQty">Cantidad Reportada:</label>
         <input type="number" id="reportedQty" required>
-        
-        <button type="submit">Registrar Venta</button>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Registrar Operación</button>
     </form>
 
-    <script src="script.js"></script> <!-- Archivo JavaScript que añadiremos más adelante -->
+    <script src="script.js"></script>
 </body>
 </html>
